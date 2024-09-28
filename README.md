@@ -85,30 +85,25 @@ The user dashboard will allow users to manage their profiles, view available fac
   - **@types/react-dom**: TypeScript definitions for React DOM.
 
 
-# Installation Guideline
+## Installation Guideline
 
 Follow these steps to set up the Sports Facility Booking Platform on your local machine.
 
-## Prerequisites
+### Prerequisites
 - Ensure you have [Node.js](https://nodejs.org/) installed (version 14 or later).
 - Ensure you have [npm](https://www.npmjs.com/) (comes bundled with Node.js) or [yarn](https://classic.yarnpkg.com/en/docs/install/) installed.
 
-## Steps to Install
+### Steps to Install
 
 1. **Clone the Repository**
    ```bash
    git clone <repository-url>
    cd sports-facility-booking-platform
    ```
-
-### Prerequisites
-
-- List any software or dependencies that need to be installed beforehand (if any).
-
-### Installation Steps
-
-1. Step-by-step instructions on how to install the project.
-2. Provide code examples or commands for clarity.
+2. **Install**
+   ```bash
+   npm install
+   ```
 
 ### Configuration
 
@@ -116,7 +111,7 @@ Follow these steps to set up the Sports Facility Booking Platform on your local 
 2. Add necessary configuration variables in the `.env` file.
    Example:
    ```bash
-    PORT=3000
+    PORT=5000
     DB_URL=your_db_connection_uri
     API_KEY=your_api_key_here
    ```
