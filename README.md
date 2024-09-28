@@ -16,12 +16,6 @@
 
 ---
 
----
-title: My Post
-date: 2024-09-29
-author: John Doe
----
-
 # Sports-Facility-Booking-Platform
 
 ## Introduction
