@@ -16,6 +16,12 @@
 
 ---
 
+---
+title: My Post
+date: 2024-09-29
+author: John Doe
+---
+
 # Sports-Facility-Booking-Platform
 
 ## Introduction
@@ -58,15 +64,48 @@ The user dashboard will allow users to manage their profiles, view available fac
 ### 6. Notifications
 - Email or in-app notifications for booking confirmations, cancellations, and updates.
 
-
 ## Technology Stack
 
-- List of technologies, frameworks, and tools used in the project.
-- Example: React, Redux, Node.js, MongoDB, etc.
+### Frontend
+- **React**: A JavaScript library for building user interfaces.
+- **React Router**: For routing and navigation within the application.
+- **Redux Toolkit**: A library for managing application state.
+- **Ant Design**: A design system for enterprise-level products.
+- **Tailwind CSS**: A utility-first CSS framework for creating custom designs.
+- **DaisyUI**: A component library for Tailwind CSS to build responsive user interfaces.
+- **Swiper**: A modern touch slider for mobile and web.
 
-## Installation Guideline
+### Development Tools
+- **TypeScript**: A typed superset of JavaScript that compiles to plain JavaScript.
+- **Vite**: A fast development server and build tool for modern web projects.
+- **ESLint**: A static code analysis tool for identifying problematic patterns in JavaScript code.
+- **PostCSS**: A tool for transforming CSS with JavaScript plugins.
+- **Autoprefixer**: A PostCSS plugin to parse CSS and add vendor prefixes.
 
-Instructions on how to install, configure, and get the project running locally.
+### Dev Dependencies
+- **ESLint Plugins**:
+  - **eslint-plugin-react-hooks**: Lint rules for React Hooks.
+  - **eslint-plugin-react-refresh**: Adds support for React Refresh during development.
+- **Type Definitions**:
+  - **@types/react**: TypeScript definitions for React.
+  - **@types/react-dom**: TypeScript definitions for React DOM.
+
+
+# Installation Guideline
+
+Follow these steps to set up the Sports Facility Booking Platform on your local machine.
+
+## Prerequisites
+- Ensure you have [Node.js](https://nodejs.org/) installed (version 14 or later).
+- Ensure you have [npm](https://www.npmjs.com/) (comes bundled with Node.js) or [yarn](https://classic.yarnpkg.com/en/docs/install/) installed.
+
+## Steps to Install
+
+1. **Clone the Repository**
+   ```bash
+   git clone <repository-url>
+   cd sports-facility-booking-platform
+   ```
 
 ### Prerequisites
 
