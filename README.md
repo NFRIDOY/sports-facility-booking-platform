@@ -9,10 +9,7 @@
   - [Features](#features)
   - [Technology Stack](#technology-stack)
   - [Installation Guidelines](#installation-guidelines)
-  - [Usage](#usage)
-  - [Contributing](#contributing)
-  - [License](#license)
-  - [Contact](#contact)
+
 
 ---
 
@@ -113,10 +110,6 @@ Follow these steps to set up the Sports Facility Booking Platform on your local 
    ```bash
     PORT=5000
     DB_URL=your_db_connection_uri
-    API_KEY=your_api_key_here
    ```
-3. Explain any specific configuration requirements or variables used in your project.
 
-## Usage
-
-Instructions or examples for using the project. Include screenshots or code snippets if applicable.
+##### Enjoy 
