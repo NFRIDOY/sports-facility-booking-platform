@@ -3,6 +3,17 @@
   <h1>About The Project</h1>
 </div>
 
+## Table of Contents
+  - [Introduction](#introduction)
+  - [Project Description](#project-description)
+  - [Features](#features)
+  - [Technology Stack](#technology-stack)
+  - [Installation Guidelines](#installation-guidelines)
+  - [Usage](#usage)
+  - [Contributing](#contributing)
+  - [License](#license)
+  - [Contact](#contact)
+
 ---
 
 # Sports-Facility-Booking-Platform
