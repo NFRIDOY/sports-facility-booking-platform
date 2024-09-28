@@ -9,16 +9,44 @@
 
 ## Introduction
 
-Brief introduction or tagline about the project.
+This project focuses on the integration of a frontend interface with an existing backend system for a sports facility booking platform. The system allows users to book various sports facilities, manage their bookings, and interact with an intuitive user interface. The backend was initially developed in Assignment 3, and in this phase, we are expanding its functionality by implementing both user and admin dashboards. The goal is to provide a seamless and interactive experience for users and administrators alike, ensuring smooth API communication between the frontend and backend.
 
 ## Project Description
 
-Detailed description of the project, including its purpose and goals.
+The sports facility booking platform enables users to browse and reserve sports venues such as basketball courts, tennis courts, football fields, and more. The platform is designed to cater to both regular users, who wish to make bookings, and administrators, who manage the facility details, schedules, and user reservations.
+
+This integration involves creating a responsive and user-friendly frontend interface using modern web development technologies. The frontend communicates with the backend via RESTful API calls to fetch data, manage bookings, and display relevant information to users and administrators.
+
+The user dashboard will allow users to manage their profiles, view available facilities, and make reservations, while the admin dashboard will offer tools for administrators to manage facility schedules, view user bookings, and perform necessary updates to the platform.
 
 ## Features
 
-- List of key features or functionalities.
-- Bullet points are helpful for clarity.
+### 1. User Dashboard
+- View available sports facilities.
+- Book a facility for a selected time slot.
+- View, modify, or cancel current bookings.
+- Manage user profile and account settings.
+
+### 2. Admin Dashboard
+- View all available facilities and their schedules.
+- Manage facility bookings and availability.
+- Add, update, or delete sports facilities and their details.
+- View and manage user bookings and accounts.
+
+### 3. Authentication and Authorization
+- User login and registration system.
+- Role-based access control (RBAC) to separate user and admin privileges.
+
+### 4. API Integration
+- RESTful API communication between frontend and backend for real-time data updates.
+- Error handling and validation on both frontend and backend sides.
+
+### 5. Responsive Design
+- A responsive and mobile-friendly interface to ensure usability on various devices.
+
+### 6. Notifications
+- Email or in-app notifications for booking confirmations, cancellations, and updates.
+
 
 ## Technology Stack
 
