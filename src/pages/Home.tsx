@@ -16,7 +16,7 @@ export default function Home() {
             <section>
                 {facitityData?.data.map((facitity : IFacility) => (
                     <>
-                        <FacilityCard />
+                        <FacilityCard facitity={facitity}/>
                     </>
                 ))}
             </section>
