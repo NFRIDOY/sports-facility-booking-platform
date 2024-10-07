@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { IUser } from "../types/user.interface";
 import toast from "react-hot-toast";
 import Swal from "sweetalert2";
+import { SuccessAlert } from "../components/ui/Alerts/SuccessAlert";
 
 const Register = () => {
     const {
@@ -17,13 +18,7 @@ const Register = () => {
         // send data to server use RTK
 
         // alart
-        Swal.fire({
-            position: "top-end",
-            icon: "success",
-            title: "Registration Successful",
-            showConfirmButton: false,
-            timer: 1500,
-        });
+        SuccessAlert("Registration Successful");
 
         toast.success("Successfully toasted!");
     };
@@ -34,12 +29,14 @@ const Register = () => {
         <div className="">
             <div className="bg-green-100 flex flex-row-reverse justify-center items-center h-screen">
                 <div className="w-1/2 h-screen hidden lg:flex justify-center items-center ">
-                    <img
-                        // src="https://img.freepik.com/fotos-premium/imagen-fondo_910766-187.jpg?w=826"
-                        src={logo}
-                        alt="Placeholder Image"
-                        className="object-cover size-96"
-                    />
+                    <Link to={"/"}>
+                        <img
+                            // src="https://img.freepik.com/fotos-premium/imagen-fondo_910766-187.jpg?w=826"
+                            src={logo}
+                            alt="Placeholder Image"
+                            className="object-cover size-96"
+                        />
+                    </Link>
                 </div>
 
                 <div className="lg:px-36 md:px-52 sm:20 p-8 w-full lg:w-1/2">

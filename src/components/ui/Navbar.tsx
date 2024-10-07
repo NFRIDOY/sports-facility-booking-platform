@@ -62,11 +62,12 @@ const Navbar = () => {
                             {menuItems}
                         </ul>
                     </div>
-                    <Link to={"/"}>
+                    <Link to={"/"} className="flex items-center space-x-2">
                         {/* <a className="btn text-xl">SporteX</a> */}
                         <a className="text-xl">
                             <img src={logo} alt="logo" className="size-12" />
                         </a>
+                        <span className="text-3xl font-black">SporteX</span>
                     </Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
