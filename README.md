@@ -101,6 +101,11 @@ Follow these steps to set up the Sports Facility Booking Platform on your local 
    ```bash
    npm install
    ```
+3. **Run**
+    ```bash
+    npm run dev
+    ```
+
 
 ### Configuration
 

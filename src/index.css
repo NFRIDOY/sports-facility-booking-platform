@@ -2,10 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-  /* border: 1px solid red; */
-  margin: 0;
-  padding: 0;
+* {
+    /* border: 1px solid red; */
+    margin: 0;
+    padding: 0;
+}
+
+.primary-bg {
+    @apply bg-blue-600;
+}
+.primary-text {
+    @apply text-blue-600;
+}
+
+.primary-btn {
+    @apply bg-blue-600 text-white hover:bg-blue-400 hover:text-black hover:border-2 hover:border-black;
 }
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;

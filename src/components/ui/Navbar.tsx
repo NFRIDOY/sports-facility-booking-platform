@@ -1,4 +1,4 @@
-
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
     return (
@@ -40,23 +40,43 @@ const Navbar = () => {
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
                         <li>
-                            <a>Item 1</a>
+                            <NavLink
+                                to="/"
+                                className={({ isActive, isPending }) =>
+                                    isPending
+                                        ? "pending"
+                                        : isActive
+                                        ? "active"
+                                        : ""
+                                }>
+                                Home
+                            </NavLink>
                         </li>
                         <li>
-                            <details>
-                                <summary>Parent</summary>
-                                <ul className="p-2">
-                                    <li>
-                                        <a>Submenu 1</a>
-                                    </li>
-                                    <li>
-                                        <a>Submenu 2</a>
-                                    </li>
-                                </ul>
-                            </details>
+                            <NavLink
+                                to="/about"
+                                className={({ isActive, isPending }) =>
+                                    isPending
+                                        ? "pending"
+                                        : isActive
+                                        ? "active"
+                                        : ""
+                                }>
+                                About Us
+                            </NavLink>
                         </li>
                         <li>
-                            <a>Item 3</a>
+                            <NavLink
+                                to="/contact"
+                                className={({ isActive, isPending }) =>
+                                    isPending
+                                        ? "pending"
+                                        : isActive
+                                        ? "active"
+                                        : ""
+                                }>
+                                Contact Us
+                            </NavLink>
                         </li>
                     </ul>
                 </div>
