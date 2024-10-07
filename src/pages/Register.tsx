@@ -51,7 +51,7 @@ const Register = () => {
         if (!isLoadingUserRegister) {
             // console.log("Success: ", postUserLoginData?.success);
             await SuccessAlert("Registration Successful");
-            navigate("/");
+            navigate("/login");
         }
 
         if (postUserRegister) {
