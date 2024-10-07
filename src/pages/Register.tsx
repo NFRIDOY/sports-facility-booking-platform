@@ -3,7 +3,6 @@ import { logo } from "../utils/images/logo";
 import { Link } from "react-router-dom";
 import { IUser } from "../types/user.interface";
 import toast from "react-hot-toast";
-import Swal from "sweetalert2";
 import { SuccessAlert } from "../components/ui/Alerts/SuccessAlert";
 
 const Register = () => {
