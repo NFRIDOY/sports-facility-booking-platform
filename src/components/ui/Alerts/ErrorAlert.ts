@@ -1,7 +1,7 @@
 import Swal from "sweetalert2";
 
-export const ErrorAlert = (message="Something went wrong!") => {
-    return Swal.fire({
+export const ErrorAlert = async (message="Something went wrong!") => {
+    return await Swal.fire({
         icon: "error",
         title: "Oops...",
         text: `${message}`,

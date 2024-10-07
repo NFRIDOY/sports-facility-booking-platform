@@ -1,6 +1,6 @@
 import { useForm, SubmitHandler } from "react-hook-form";
 import { logo } from "../utils/images/logo";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { usePostUserLoginMutation } from "../redux/api/api";
 import { ErrorAlert } from "../components/ui/Alerts/ErrorAlert";
 import { SuccessAlert } from "../components/ui/Alerts/SuccessAlert";
@@ -22,7 +22,9 @@ const Login = () => {
         postUserLogin,
         { data: postUserLoginData, isLoading: isLoadingUserLogin, isError },
     ] = usePostUserLoginMutation();
-    
+
+    const navigate = useNavigate()
+
     const onSubmit: SubmitHandler<TLoginUser> = async (data: TLoginUser) => {
         console.log(data);
 
@@ -34,15 +36,17 @@ const Login = () => {
         // await console.log("isLoading : ", isLoadingUserLogin);
 
         // alert
-        if (isError) {
+        if (await isError) {
             console.log("Error: " + data);
             ErrorAlert();
             return;
         }
-        if (postUserLoginData) {
+        // await postUserLoginData;
+        if (!isLoadingUserLogin) {
             // console.log("Success: ", postUserLoginData?.success);
             console.log("postUserLoginData : ", postUserLoginData);
-            SuccessAlert();
+            await SuccessAlert("Login Successful");
+            navigate("/")
         }
     };
 

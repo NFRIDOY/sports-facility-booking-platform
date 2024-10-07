@@ -1,6 +1,6 @@
 import { useForm, SubmitHandler } from "react-hook-form";
 import { logo } from "../utils/images/logo";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { IUser } from "../types/user.interface";
 import { SuccessAlert } from "../components/ui/Alerts/SuccessAlert";
 import { usePostUserRegisterMutation } from "../redux/api/api";
@@ -33,6 +33,8 @@ const Register = () => {
         },
     ] = usePostUserRegisterMutation();
 
+    const navigate = useNavigate();
+
     const onSubmit: SubmitHandler<IUser> = async (data) => {
         console.log("data =>>", data);
 
@@ -45,10 +47,16 @@ const Register = () => {
             ErrorAlert();
             return;
         }
+
+        if (!isLoadingUserRegister) {
+            // console.log("Success: ", postUserLoginData?.success);
+            await SuccessAlert("Registration Successful");
+            navigate("/");
+        }
+
         if (postUserRegister) {
             // console.log("Success: ", postUserRegister?.success);
             console.log("postUserRegister : ", postUserRegister);
-            SuccessAlert("Registration Successful");
         }
     };
 

@@ -1,7 +1,7 @@
 import Swal from "sweetalert2";
 
-export const SuccessAlert = (message = "Successful") => {
-    return Swal.fire({
+export const SuccessAlert = async (message = "Successful") => {
+    return await Swal.fire({
         position: "top-end",
         icon: "success",
         title: `${message}`,
