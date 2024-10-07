@@ -30,7 +30,7 @@ const CustomerTestimonial = () => {
                         <SwiperSlide>
                             <div
                                 key={customerTestimonial.id}
-                                className="carousel-item h-44 w-[95%] flex justify-center p-1 primary-border">
+                                className="carousel-item h-48 w-[95%] flex justify-center p-1 primary-border">
                                 <div className="card w-96 bg-base-100 shadow-xl">
                                     <div className="card-body">
                                         <h2 className="card-title">
