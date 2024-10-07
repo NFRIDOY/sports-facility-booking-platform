@@ -2,27 +2,66 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { logo } from "../utils/images/logo";
 import { Link } from "react-router-dom";
 import { IUser } from "../types/user.interface";
-import toast from "react-hot-toast";
 import { SuccessAlert } from "../components/ui/Alerts/SuccessAlert";
+import { usePostUserRegisterMutation } from "../redux/api/api";
+import { ErrorAlert } from "../components/ui/Alerts/ErrorAlert";
+import Loading from "../components/ui/Loadings/Loading";
+import { USER_Role } from "../types/user.constants";
 
 const Register = () => {
     const {
         register,
         handleSubmit,
         formState: { errors },
-    } = useForm<IUser>();
-    const onSubmit: SubmitHandler<IUser> = (data) => {
-        console.log(data);
+    } = useForm<IUser>({
+        defaultValues: {
+            role: USER_Role.user, // default value
+            email: "", // default
+            address: "", // default
+            name: "", // default
+            password: "", // default
+            phone: "", // default
+        },
+    });
+
+    const [
+        postUserRegister,
+        {
+            data: postUserRegisterData,
+            isLoading: isLoadingUserRegister,
+            isError,
+        },
+    ] = usePostUserRegisterMutation();
+
+    const onSubmit: SubmitHandler<IUser> = async (data) => {
+        console.log("data =>>", data);
 
         // send data to server use RTK
+        await postUserRegister(data);
 
         // alart
-        SuccessAlert("Registration Successful");
-
-        toast.success("Successfully toasted!");
+        if (isError) {
+            console.log("Error: " + postUserRegisterData);
+            ErrorAlert();
+            return;
+        }
+        if (postUserRegister) {
+            // console.log("Success: ", postUserRegister?.success);
+            console.log("postUserRegister : ", postUserRegister);
+            SuccessAlert("Registration Successful");
+        }
     };
 
     // console.log(watch("email")); // watch input value by passing the name of it
+
+    if (isLoadingUserRegister) {
+        return <Loading />;
+    }
+
+    // if (isError) {
+    //     // ErrorAlert();
+    //     return <ErrorCommon />;
+    // }
 
     return (
         <div className="">

@@ -11,6 +11,8 @@ export const baseApi = createApi({
         //     process.env.NODE_ENV === "production"
         //         ? "https://sports-facility-booking-platform-server-ten.vercel.app/api"
         //         : "http://localhost:5000/api",
+
+        credentials: 'include', // Include cookies with requests
     }),
     endpoints: (builder) => ({
         getFacility: builder.query({
