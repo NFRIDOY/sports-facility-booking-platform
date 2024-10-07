@@ -1,4 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
+import { logo } from "../../utils/images/logo";
+
 
 const Navbar = () => {
     return (
@@ -36,7 +38,10 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <Link to={"/"}>
-                        <a className="btn text-xl">SporteX</a>
+                        {/* <a className="btn text-xl">SporteX</a> */}
+                        <a className="text-xl">
+                            <img src={logo} alt="logo" className="size-12" />
+                        </a>
                     </Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
