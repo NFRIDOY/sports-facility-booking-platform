@@ -11,13 +11,21 @@ export default function Banner() {
                 <SwiperSlide>Slide 1</SwiperSlide>
             </Swiper> */}
             <div>
-                <img src={banner1} alt="Banner1" className="w-full h-[600px]" />
+                <img
+                    src={banner1}
+                    alt="Banner1"
+                    className="w-full h-[600px] brightness-75"
+                />
             </div>
-            <h1 className="absolute top-0 text-8xl text-white">
-                <h2>Cricket Fields at Your Fingertips</h2>
-                <button className="btn primary-btn">Book Now!</button>
-                {/* <h2>You Naver Wanna Miss The Match You Care</h2>
+            <h1 className="absolute top-[50vh] left-[59vh] ">
+                <div className="text-8xl text-white flex flex-col justify-center items-center gap-y-8 border-0 ">
+                    <h2>Feel Your Sports</h2>
+                    <div className="flex justify-end">
+                        <button className="btn primary-btn">Book Now!</button>
+                    </div>
+                    {/* <h2>You Naver Wanna Miss The Match You Care</h2>
                 <h2>Book Your Ticket Now...</h2> */}
+                </div>
             </h1>
         </div>
     );

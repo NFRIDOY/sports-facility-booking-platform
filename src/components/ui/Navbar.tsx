@@ -1,9 +1,9 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
     return (
         <div>
-            <div className="navbar bg-blue-600 text-white">
+            <div className="navbar primary-bg text-white">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div
@@ -35,7 +35,9 @@ const Navbar = () => {
                             </li>
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">daisyUI</a>
+                    <Link to={"/"}>
+                        <a className="btn text-xl">SporteX</a>
+                    </Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">

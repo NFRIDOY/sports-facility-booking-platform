@@ -9,14 +9,14 @@
 }
 
 .primary-bg {
-    @apply bg-blue-600;
+    @apply bg-sky-500;
 }
 .primary-text {
-    @apply text-blue-600;
+    @apply text-white;
 }
 
 .primary-btn {
-    @apply bg-blue-600 text-white hover:bg-blue-400 hover:text-black hover:border-2 hover:border-black;
+    @apply bg-sky-500 text-white hover:bg-sky-400 hover:text-black hover:border-2 hover:border-sky-950;
 }
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
