@@ -1,8 +1,38 @@
 import { Link, NavLink } from "react-router-dom";
 import { logo } from "../../utils/images/logo";
 
-
 const Navbar = () => {
+    const menuItems = (
+        <>
+            <li>
+                <NavLink
+                    to="/"
+                    className={({ isActive, isPending }) =>
+                        isPending ? "pending" : isActive ? "active" : ""
+                    }>
+                    Home
+                </NavLink>
+            </li>
+            <li>
+                <NavLink
+                    to="/about"
+                    className={({ isActive, isPending }) =>
+                        isPending ? "pending" : isActive ? "active" : ""
+                    }>
+                    About Us
+                </NavLink>
+            </li>
+            <li>
+                <NavLink
+                    to="/contact"
+                    className={({ isActive, isPending }) =>
+                        isPending ? "pending" : isActive ? "active" : ""
+                    }>
+                    Contact Us
+                </NavLink>
+            </li>
+        </>
+    );
     return (
         <div>
             <div className="navbar primary-bg text-white">
@@ -29,12 +59,7 @@ const Navbar = () => {
                         <ul
                             tabIndex={0}
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                            <li>
-                                <a>Item 1</a>
-                            </li>
-                            <li>
-                                <a>Item 3</a>
-                            </li>
+                            {menuItems}
                         </ul>
                     </div>
                     <Link to={"/"}>

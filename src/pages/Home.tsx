@@ -1,10 +1,11 @@
 import Banner from "../components/layout/Banners/Banner";
-import FacilityCard from "../components/layout/Facility/FacilityCard/FacilityCard";
+import CustomerTestimonial from "../components/layout/Sliders/CustomerTestimonial";
 import { useGetFacilityQuery } from "../redux/api/api";
-import { IFacility } from "../types/facility.interface";
 
 export default function Home() {
     const { isLoading, data: facitityData } = useGetFacilityQuery(undefined);
+
+    // import { Pagination } from 'swiper/modules';
 
     if (isLoading) {
         return <div>Loading...</div>;
@@ -13,13 +14,34 @@ export default function Home() {
     return (
         <div>
             <Banner />
-            <section>
+            {/* <section>
                 {facitityData?.data.map((facitity : IFacility) => (
                     <>
                         <FacilityCard facitity={facitity}/>
                     </>
                 ))}
-            </section>
+            </section> */}
+            {/* <div>
+                {customerTestimonials.map(
+                    (customerTestimonial: TCustomerTestimonial) => (
+                        <>
+                            <div
+                                key={customerTestimonial.id}
+                                className="carousel-item w-full flex justify-center p-4">
+                                <div className="card w-96 bg-base-100 shadow-xl">
+                                    <div className="card-body">
+                                        <h2 className="card-title">
+                                            {customerTestimonial.name}
+                                        </h2>
+                                        <p>{customerTestimonial.body}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </>
+                    )
+                )}
+            </div> */}
+            <CustomerTestimonial />
         </div>
     );
 }
