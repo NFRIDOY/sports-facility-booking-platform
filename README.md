@@ -1,6 +1,11 @@
 
 <div align="center">
-  <h1>About The Project</h1>
+  <h1>About The Project
+  <div style="color: #808080">
+  SporteX: Sports-Facility-Booking-Platform
+  </div></h1>
+  <h5><a href="https://sports-facility-booking-platform-phi.vercel.app/">
+  Live</a> </h5>
 </div>
 
 ## Table of Contents

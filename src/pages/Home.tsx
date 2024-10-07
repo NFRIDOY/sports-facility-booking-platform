@@ -1,16 +1,14 @@
 import Banner from "../components/layout/Banners/Banner";
 import CustomerTestimonial from "../components/layout/Sliders/CustomerTestimonial";
-import { useGetFacilityQuery } from "../redux/api/api";
 
 export default function Home() {
-    const { isLoading, data: facitityData } = useGetFacilityQuery(undefined);
 
     // import { Pagination } from 'swiper/modules';
 
-    if (isLoading) {
-        return <div>Loading...</div>;
-    }
-    console.log("data => ", facitityData.data);
+    // if (isLoading) {
+    //     return <Loading />
+    // }
+    // console.log("data => ", facitityData.data);
     return (
         <div>
             <Banner />
