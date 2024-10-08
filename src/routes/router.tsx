@@ -23,6 +23,10 @@ const router = createBrowserRouter([
                 path: "contact",
                 element: <Contact />,
             },
+            {
+                path: "facility/:id",
+                element: <Contact />,
+            },
         ],
     },
     {
