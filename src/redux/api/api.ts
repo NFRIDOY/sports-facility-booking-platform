@@ -12,9 +12,16 @@ export const baseApi = createApi({
         //         ? "https://sports-facility-booking-platform-server-ten.vercel.app/api"
         //         : "http://localhost:5000/api",
 
-        credentials: 'include', // Include cookies with requests
+        credentials: "include", // Include cookies with requests
     }),
     endpoints: (builder) => ({
+        getFacilityById: builder.query({
+            query: (id) => ({
+                url: `/facility/${id}`,
+                method: "GET",
+            }),
+        }),
+
         getFacility: builder.query({
             query: () => ({
                 url: "/facility",
@@ -22,11 +29,12 @@ export const baseApi = createApi({
             }),
         }),
 
-        postUserLogin: builder.mutation({ // how do I get the response from the server
+        postUserLogin: builder.mutation({
+            // how do I get the response from the server
             query: (user) => ({
                 url: "/auth/login",
                 method: "POST",
-                body: user
+                body: user,
             }),
         }),
 
@@ -34,13 +42,14 @@ export const baseApi = createApi({
             query: (user) => ({
                 url: "/auth/signup",
                 method: "POST",
-                body: user
+                body: user,
             }),
         }),
     }),
 });
 
 export const {
+    useGetFacilityByIdQuery,
     useGetFacilityQuery,
     usePostUserLoginMutation,
     usePostUserRegisterMutation,

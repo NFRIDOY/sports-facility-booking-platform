@@ -5,6 +5,7 @@ import Contact from "../pages/Contact";
 import About from "../pages/About";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+import FacilityDetailsPage from "../pages/FacilityDetailsPage";
 
 const router = createBrowserRouter([
     {
@@ -25,7 +26,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "facility/:id",
-                element: <Contact />,
+                element: <FacilityDetailsPage />,
             },
         ],
     },

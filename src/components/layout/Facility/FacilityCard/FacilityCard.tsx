@@ -5,7 +5,7 @@ const FacilityCard = ({ facitity }: { facitity: IFacility }) => {
         <div>
             <div className="mx-auto my-10 card w-96 h-96 bg-base-100 shadow-xl m-4 border-t-0 border-t-sky-500 hover:border-t-8">
                 <div className="card-body">
-                    <Link to={`/`}>
+                    <Link to={`/facility/${facitity?._id}`}>
                         <h2 className="card-title text-xl font-bold">
                             {facitity.name}
                         </h2>
