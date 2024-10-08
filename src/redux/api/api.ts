@@ -5,12 +5,12 @@ export const baseApi = createApi({
     // baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:5000/api" }),
     baseQuery: fetchBaseQuery({
         // baseUrl: "import.meta.env.VITE_BaseApi/api",
-        baseUrl: "http://localhost:5000/api",
+        // baseUrl: "http://localhost:5000/api",
         // baseUrl: "https://sports-facility-booking-platform-server-ten.vercel.app/api",
-        // baseUrl:
-        //     process.env.NODE_ENV === "production"
-        //         ? "https://sports-facility-booking-platform-server-ten.vercel.app/api"
-        //         : "http://localhost:5000/api",
+        baseUrl:
+            process.env.NODE_ENV === "production"
+                ? "https://sports-facility-booking-platform-server-ten.vercel.app/api"
+                : "http://localhost:5000/api",
 
         credentials: "include", // Include cookies with requests
     }),
