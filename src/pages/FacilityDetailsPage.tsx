@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
-import { sportsBanner } from "../utils/StaticData/SportsBanner";
 import { useGetFacilityByIdQuery } from "../redux/api/api";
 import Loading from "../components/ui/Loadings/Loading";
 import ErrorCommon from "../components/ui/Error/ErrorCommon";
 import { IFacility } from "../types/facility.interface";
+import { sportsBanner } from "../utils/StaticData/sportBanner";
 
 // const FacilityDetailsPage = ({ facitity }: { facitity: IFacility }) => {
 const FacilityDetailsPage = () => {

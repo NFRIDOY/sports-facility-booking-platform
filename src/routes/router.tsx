@@ -6,6 +6,7 @@ import About from "../pages/About";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import FacilityDetailsPage from "../pages/FacilityDetailsPage";
+import DashboardUser from "../pages/DashboardUser/DashboardUser";
 
 const router = createBrowserRouter([
     {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
     {
         path: "/register",
         element: <Register />,
+    },
+    {
+        path: "/dashboard/user/:userId",
+        element: <DashboardUser />,
     },
 ]);
 

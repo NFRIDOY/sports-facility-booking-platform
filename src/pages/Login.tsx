@@ -26,10 +26,10 @@ const Login = () => {
     const navigate = useNavigate()
 
     const onSubmit: SubmitHandler<TLoginUser> = async (data: TLoginUser) => {
-        console.log(data);
+        // console.log(data);
 
         // send data to server use RTK
-        await postUserLogin(data);
+        const res = await postUserLogin(data).unwrap();
         // console.log(result);
         // await console.log("postUserLoginData : ", postUserLoginData);
         // console.log("postUserLoginData : ", postUserLoginData);
@@ -41,11 +41,17 @@ const Login = () => {
             ErrorAlert();
             return;
         }
+        if(isLoadingUserLogin) {
+            console.log("object")
+        }
         // await postUserLoginData;
-        if (!isLoadingUserLogin) {
+        if (await !isLoadingUserLogin) {
             // console.log("Success: ", postUserLoginData?.success);
-            console.log("postUserLoginData : ", postUserLoginData);
+            console.log("postUserLoginData : ", await res.data);
+            // console.log("postUserLoginData : ", await isLoadingUserLogin);
             await SuccessAlert("Login Successful");
+            /** Check user Or admin */
+            if(postUserLoginData)
             navigate("/")
         }
     };
