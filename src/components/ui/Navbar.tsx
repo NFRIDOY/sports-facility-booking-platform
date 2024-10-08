@@ -1,5 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import { logo } from "../../utils/images/logo";
+import { FaRegUser } from "react-icons/fa";
 
 const Navbar = () => {
     const menuItems = (
@@ -119,28 +120,33 @@ const Navbar = () => {
                             tabIndex={0}
                             role="button"
                             className="btn btn-ghost btn-circle avatar">
-                            <div className="w-10 rounded-full">
-                                <img
+                            <div className="">
+                                <FaRegUser size={30} />
+                                {/* <img
                                     alt="Tailwind CSS Navbar component"
                                     src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
-                                />
+                                /> */}
                             </div>
                         </div>
                         <ul
                             tabIndex={0}
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
                             <li>
-                                <Link to={"/dashboard"} className="btn">
+                                <Link
+                                    to={"/dashboard"}
+                                    className="btn primary-btn">
                                     Dashboard
                                 </Link>
                             </li>
                             <li>
-                                <Link to={"/login"} className="btn">
+                                <Link to={"/login"} className="btn primary-btn">
                                     Login
                                 </Link>
                             </li>
                             <li>
-                                <a>Logout</a>
+                                <Link to={"/logout"} className="btn btn-error text-white">
+                                    Logout
+                                </Link>
                             </li>
                         </ul>
                     </div>
