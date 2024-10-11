@@ -8,6 +8,7 @@ export default function Home() {
             <Banner />
             <FacititySection />
             <CustomerTestimonial />
+            {/* <TimeInput /> */}
         </div>
     );
 }
