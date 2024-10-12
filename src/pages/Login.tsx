@@ -34,12 +34,19 @@ const Login = () => {
     const onSubmit: SubmitHandler<TLoginUser> = async (data: TLoginUser) => {
         try {
             const response = await postUserLogin(data).unwrap();
-            
+
             console.log(response.data);
 
             if (response && response.success) {
                 // Update user state
                 dispatch(loginSuccess(response.data));
+
+                // set data on session storage
+                // Store the user data in localStorage for persistence
+                localStorage.setItem(
+                    "currentUser",
+                    JSON.stringify(response.data)
+                );
 
                 // Show success alert
                 await SuccessAlert("Login Successful" + currentUser?.name);

@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useGetFacilityByIdQuery } from "../redux/api/api";
 import Loading from "../components/ui/Loadings/Loading";
 import ErrorCommon from "../components/ui/Error/ErrorCommon";
@@ -48,8 +48,15 @@ const FacilityDetailsPage = () => {
                 </span>
             </h1>
 
-    <div className="text-2xl text-gray-600 px-10">Description: {facilityDetails.description}</div>
-    <div className="text-2xl text-gray-600 px-10">Location: {facilityDetails.location}</div>
+            <div className="text-2xl text-gray-400 px-10">
+                Description: {facilityDetails.description}
+            </div>
+            <div className="text-2xl text-gray-400 px-10">
+                Location: {facilityDetails.location}
+            </div>
+            <div className="text-2xl text-gray-600 px-10 flex justify-end">
+                <Link to={`/confrimation/${id}`} className="btn primary-btn">Book Now</Link>
+            </div>
         </div>
     );
 };
