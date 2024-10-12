@@ -9,7 +9,7 @@ const Navbar = () => {
                 <NavLink
                     to="/"
                     className={({ isActive, isPending }) =>
-                        isPending ? "pending" : isActive ? "active" : ""
+                        isPending ? "pending" : isActive ? "active font-semibold" : "font-semibold"
                     }>
                     Home
                 </NavLink>
@@ -18,7 +18,7 @@ const Navbar = () => {
                 <NavLink
                     to="/about"
                     className={({ isActive, isPending }) =>
-                        isPending ? "pending" : isActive ? "active" : ""
+                        isPending ? "pending" : isActive ? "active font-semibold" : "font-semibold"
                     }>
                     About Us
                 </NavLink>
@@ -27,7 +27,7 @@ const Navbar = () => {
                 <NavLink
                     to="/contact"
                     className={({ isActive, isPending }) =>
-                        isPending ? "pending" : isActive ? "active" : ""
+                        isPending ? "pending" : isActive ? "active font-semibold" : "font-semibold"
                     }>
                     Contact Us
                 </NavLink>
@@ -80,8 +80,8 @@ const Navbar = () => {
                                     isPending
                                         ? "pending"
                                         : isActive
-                                        ? "active"
-                                        : ""
+                                        ? "active font-semibold"
+                                        : "font-semibold"
                                 }>
                                 Home
                             </NavLink>
@@ -93,8 +93,8 @@ const Navbar = () => {
                                     isPending
                                         ? "pending"
                                         : isActive
-                                        ? "active"
-                                        : ""
+                                        ? "active font-semibold"
+                                        : "font-semibold"
                                 }>
                                 About Us
                             </NavLink>
@@ -106,8 +106,8 @@ const Navbar = () => {
                                     isPending
                                         ? "pending"
                                         : isActive
-                                        ? "active"
-                                        : ""
+                                        ? "active font-semibold"
+                                        : "font-semibold"
                                 }>
                                 Contact Us
                             </NavLink>
@@ -120,7 +120,7 @@ const Navbar = () => {
                             tabIndex={0}
                             role="button"
                             className="btn btn-ghost btn-circle avatar">
-                            <div className="">
+                            <div className="font-semibold">
                                 <FaRegUser size={30} />
                                 {/* <img
                                     alt="Tailwind CSS Navbar component"
