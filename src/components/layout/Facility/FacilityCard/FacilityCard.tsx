@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 import { IFacility } from "./../../../../types/facility.interface";
 const FacilityCard = ({ facitity }: { facitity: IFacility }) => {
     return (
-        <div>
+        <Link to={`/facility/${facitity?._id}`}>
             <div className="mx-auto my-10 card w-96 h-80 bg-base-100 shadow-xl m-4 border-t-2 border-t-sky-500 hover:border-t-8">
                 <div className="card-body ">
-                    <Link to={`/facility/${facitity?._id}`} className="flex-grow">
+                    <div className="flex-grow">
                         <h2 className="card-title text-xl font-bold">
                             {facitity.name}
                         </h2>
@@ -15,13 +15,13 @@ const FacilityCard = ({ facitity }: { facitity: IFacility }) => {
                             </p>
                         </div>
                         <p className="my-2">Location: {facitity.location}</p>
-                    </Link>
+                    </div>
                     <div className="card-actions justify-end">
                         <button className="btn primary-btn">Book Now</button>
                     </div>
                 </div>
             </div>
-        </div>
+        </Link>
     );
 };
 
