@@ -1,6 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import type { PayloadAction } from "@reduxjs/toolkit";
-import { IFacility } from "../../../types";
 
 export interface IBookingRequest {
     date: Date;
@@ -43,6 +41,6 @@ export const bookingSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { addBooking, removeBooking, addBookingByAmount } = bookingSlice.actions;
+export const { addBooking } = bookingSlice.actions;
 
 export default bookingSlice.reducer;
