@@ -131,23 +131,23 @@ const Navbar = () => {
                         <ul
                             tabIndex={0}
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                            <li>
+                            {/* <li>
                                 <Link
                                     to={"/dashboard"}
                                     className="btn primary-btn">
                                     Dashboard
                                 </Link>
-                            </li>
+                            </li> */}
                             <li>
                                 <Link to={"/login"} className="btn primary-btn">
                                     Login
                                 </Link>
                             </li>
-                            <li>
+                            {/* <li>
                                 <Link to={"/logout"} className="btn btn-error text-white">
                                     Logout
                                 </Link>
-                            </li>
+                            </li> */}
                         </ul>
                     </div>
                 </div>
