@@ -8,7 +8,7 @@ import ErrorCommon from "../components/ui/Error/ErrorCommon";
 import Loading from "../components/ui/Loadings/Loading";
 import { useAppDispatch, useAppSelector } from "../redux/hooks";
 
-import { loginSuccess, loginFailure } from "../redux/features/user/userSlice";
+import { loginFailure, loginSuccess } from "../redux/features/user/userSlice";
 
 export type TLoginUser = {
     email: string;
@@ -22,10 +22,8 @@ const Login = () => {
         formState: { errors },
     } = useForm<TLoginUser>();
 
-    const [
-        postUserLogin,
-        { data: postUserLoginData, isLoading: isLoadingUserLogin, isError },
-    ] = usePostUserLoginMutation();
+    const [postUserLogin, { isLoading: isLoadingUserLogin, isError }] =
+        usePostUserLoginMutation();
 
     const navigate = useNavigate();
     const dispatch = useAppDispatch();
@@ -54,7 +52,7 @@ const Login = () => {
             }
         } catch (error) {
             console.error("Login Error: ", error);
-            dispatch(loginFailure(error?.data?.message || "Login failed"));
+            dispatch(loginFailure("Login failed"));
             ErrorAlert();
         }
     };
