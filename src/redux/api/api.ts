@@ -5,7 +5,7 @@ export const baseApi = createApi({
     // baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:5000/api" }),
     baseQuery: fetchBaseQuery({
         // baseUrl: "import.meta.env.VITE_BaseApi/api",
-        // baseUrl: "http://localhost:5000/api",
+        // http://localhost:5000/api",
         // baseUrl: "https://sports-facility-booking-platform-server-ten.vercel.app/api",
         baseUrl:
             process.env.NODE_ENV === "production"
@@ -19,6 +19,19 @@ export const baseApi = createApi({
             query: (id) => ({
                 url: `/facility/${id}`,
                 method: "GET",
+            }),
+        }),
+
+        bookByFacilityId: builder.mutation({
+            query: (bookingReq) => ({
+                url: `/bookings/create-booking`, //! change url
+                method: "POST",
+                body: {
+                    facility: bookingReq?.facility,
+                    startTime: bookingReq.startTime,
+                    endTime: bookingReq.endTime,
+                    date: new Date()
+                }
             }),
         }),
 
@@ -53,4 +66,5 @@ export const {
     useGetFacilityQuery,
     usePostUserLoginMutation,
     usePostUserRegisterMutation,
+    useBookByFacilityIdMutation
 } = baseApi;

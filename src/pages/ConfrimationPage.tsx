@@ -1,11 +1,7 @@
-import BookingConfirmation from "./BookingConfirmation";
-
-
 
 const ConfrimationPage = () => {
     return <div>
         
-        <BookingConfirmation />
     </div>;
 };
 

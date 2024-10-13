@@ -8,9 +8,17 @@ interface UserState {
     error: string | null;
 }
 
+// const initialState: UserState = {
+//     currentUser: null,
+//     isAuthenticated: false,
+//     isLoading: false,
+//     error: null,
+// };
+
+const userFromLocalStorage = localStorage.getItem("currentUser");
 const initialState: UserState = {
-    currentUser: null,
-    isAuthenticated: false,
+    currentUser: userFromLocalStorage ? JSON.parse(userFromLocalStorage) : null,
+    isAuthenticated: !!userFromLocalStorage,
     isLoading: false,
     error: null,
 };

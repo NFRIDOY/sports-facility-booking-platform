@@ -7,6 +7,8 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import FacilityDetailsPage from "../pages/FacilityDetailsPage";
 import DashboardUser from "../pages/DashboardUser/DashboardUser";
+import ConfrimationPage from "../pages/ConfrimationPage";
+import BookingConfirmation from "../pages/BookingConfirmation";
 
 const router = createBrowserRouter([
     {
@@ -32,16 +34,24 @@ const router = createBrowserRouter([
         ],
     },
     {
-        path: "/login",
+        path: "login",
         element: <Login />,
     },
     {
-        path: "/register",
+        path: "register",
         element: <Register />,
     },
     {
         path: "/dashboard/user/:userId",
         element: <DashboardUser />,
+    },
+    {
+        path: "/confrimation/:id",
+        element: <BookingConfirmation />,
+    },
+    {
+        path: "/confrimationPage/:id",
+        element: <BookingConfirmation />,
     },
 ]);
 
