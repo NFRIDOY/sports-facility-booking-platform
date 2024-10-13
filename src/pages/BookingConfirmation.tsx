@@ -23,7 +23,7 @@ const BookingConfirmation = () => {
     } = useGetFacilityByIdQuery(id);
     const [
         confirmBooking,
-        { isLoading: isConfirming, isError: isConfirmError },
+        { isLoading: isConfirming },
     ] = useBookByFacilityIdMutation();
 
     useEffect(() => {

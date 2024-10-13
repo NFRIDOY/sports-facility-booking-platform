@@ -7,7 +7,6 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import FacilityDetailsPage from "../pages/FacilityDetailsPage";
 import DashboardUser from "../pages/DashboardUser/DashboardUser";
-import ConfrimationPage from "../pages/ConfrimationPage";
 import BookingConfirmation from "../pages/BookingConfirmation";
 
 const router = createBrowserRouter([
